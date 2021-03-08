@@ -1,9 +1,7 @@
-// https://rapidapi.com/api-sports/api/api-baseball?endpoint=apiendpoint_fe974404-4ed3-4a75-bacd-42eed33d2917
-//      https://rapidapi.com/api-sports/api/api-nba/endpoints
+//  https://rapidapi.com/api-sports/api/api-basketball
 
 //  https://rapidapi.com/developer/dashboard
 let key = '10f0d3c959mshe5fca1f0098b852p17d5bajsncdeef06aead7';			//  rapid API
-let url = "https://api-nba-v1.p.rapidapi.com";
 
 /*
  *  The 'Get NBA Teams' button was pushed

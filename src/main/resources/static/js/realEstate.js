@@ -1,20 +1,6 @@
-function getPropertyById() {
-//    let conference = document.getElementById('conference').value;
+//  https://rapidapi.com/apidojo/api/realtor
 
-    fetch("https://realtor.p.rapidapi.com/properties/v2/detail?property_id=O3599084026", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-key": "10f0d3c959mshe5fca1f0098b852p17d5bajsncdeef06aead7",
-            "x-rapidapi-host": "realtor.p.rapidapi.com"
-        }
-    })
-        .then(response => {
-            console.log(response);
-        })
-        .catch(err => {
-            console.error(err);
-        });
-}
+let key = '10f0d3c959mshe5fca1f0098b852p17d5bajsncdeef06aead7';			//  rapid API
 
 function getHomes() {
     let city     = document.getElementById('city').value;
@@ -45,7 +31,7 @@ function getHomes() {
     fetch(url, {
         "method": "GET",
         "headers": {
-            "x-rapidapi-key": "10f0d3c959mshe5fca1f0098b852p17d5bajsncdeef06aead7",
+            "x-rapidapi-key": key,
             "x-rapidapi-host": "realtor.p.rapidapi.com"
         }
     })
@@ -75,4 +61,17 @@ function showHomes(homes) {
             </tr>`;
     }
     homeTable.innerHTML = html;
+}
+
+function getPropertyById() {
+    fetch("https://realtor.p.rapidapi.com/properties/v2/detail?property_id=O3599084026", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-key": key,
+            "x-rapidapi-host": "realtor.p.rapidapi.com"
+        }
+    })
+        .then(response => console.log(response))
+        .then(response => response.json())
+        .catch(err => console.error(err));
 }
