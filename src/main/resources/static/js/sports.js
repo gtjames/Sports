@@ -1,4 +1,4 @@
-//  https://rapidapi.com/api-sports/api/api-basketball
+//  https://rapidapi.com/api-sports/api/api-nba
 //  https://rapidapi.com/developer/dashboard
 
 let key = 'your key goes here';			//  rapid API
