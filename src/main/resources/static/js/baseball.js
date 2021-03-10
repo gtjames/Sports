@@ -1,6 +1,6 @@
 //  https://rapidapi.com/api-sports/api/api-baseball
 
-let key = 'your key goes here';			//  rapid API
+let key = '10f0d3c959mshe5fca1f0098b852p17d5bajsncdeef06aead7';			//  rapid API
 
 function getMLBTeams() {
     let season = document.getElementById('season').value;

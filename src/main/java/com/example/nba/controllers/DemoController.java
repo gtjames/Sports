@@ -11,7 +11,7 @@ public class DemoController {
     @RequestMapping("/nba")                                    //  this code will be reached by /test/nba
     public String nba(Model model) {
         //  Present the nbaTeams page which allows you to search for teams by conference
-        return "nbaTeams";
+        return "basketball";
     }
 
     @RequestMapping("/homes")                                    //  this code will be reached by /test/homes
@@ -23,6 +23,6 @@ public class DemoController {
     @RequestMapping("/mlb")                                    //  this code will be reached by /test/mlb
     public String mlb(Model model) {
         //  present the MLBTeams page to search by league and year
-        return "MLBTeams";
+        return "baseball";
     }
 }
