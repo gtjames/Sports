@@ -58,14 +58,15 @@ function showHomes(homes) {
                <td><img src='${home.agents[0].photo.href}' width=100px height=100px><br>${home.agents[0].name}</>
 		       <td><a href="${home.rdc_web_url}"       target="_blank">${home.property_id}</a></td>
 		       <td><a href="${home.virtual_tour.href}" target="_blank"><img src="${home.thumbnail}" width=200px height=100px> </a></td>
+		       <td onclick="getPropertyById('${home.property_id}')">Property List Details</td>
             </tr>`;
     }
     homeTable.innerHTML = html;
 }
 
 //  not used currently
-function getPropertyById() {
-    fetch("https://realtor.p.rapidapi.com/properties/v2/detail?property_id=O3599084026", {
+function getPropertyById(id) {
+    fetch("https://realtor.p.rapidapi.com/properties/v2/detail?property_id=" + id, {
         "method": "GET",
         "headers": {
             "x-rapidapi-key": key,
@@ -73,6 +74,12 @@ function getPropertyById() {
         }
     })
         .then(response => response.json())
-        .then(response => console.log(response))
+        .then(homeData => showHomeDetails(homeData.properties[0]))
         .catch(err => console.error(err));
+}
+
+function showHomeDetails(homeData) {
+    console.log(homeData);
+    console.table(homeData);
+    document.body.innerHTML = homeData
 }
